@@ -1,0 +1,31 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+# one:
+#   content: MyText
+#   user: one
+
+# two:
+#   content: MyText
+#   user: two
+
+clash_of_clans:
+  content: "Babarian"
+  created_at: <%= 10.minutes.ago %>
+  user: hoang
+
+Warcraft:
+  content: "Lich King"
+  created_at: <%= 5.minutes.ago %>
+  user: admin
+
+LoL:
+  content: "Reneketon"
+  created_at: <%= 2.minutes.ago %>
+  user: hoang
+  
+<% 30.times do |n| %>
+micropost_<%= n %>:
+  content: <%= Faker::Lorem.sentence(3) %>
+  created_at: <%= 42.days.ago %>
+  user: hoang
+<% end %>

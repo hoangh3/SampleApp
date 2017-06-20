@@ -1,0 +1,29 @@
+# PostgreSQL
+#   gem install pq
+#
+#   Ensure the pq 0.18.4 gem is defined in your Gemfile
+#   gem 'pq'
+#
+
+
+
+default: &default
+  adapter: postgresql
+  pool: 5
+  timeout: 5000
+  port: 5432
+  host: localhost
+  username: hoangh3
+  password: 12345678
+
+development:
+  <<: *default
+  database: sampleApp_development
+
+test:
+  <<: *default
+  database: sampleApp_test
+
+production:
+  <<: *default
+  database: sampleApp_production
