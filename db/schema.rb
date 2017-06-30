@@ -10,10 +10,41 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160808065823) do
+ActiveRecord::Schema.define(version: 20170620082615) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "chat_engine_groups", force: :cascade do |t|
+    t.string   "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "chat_engine_message_recipients", force: :cascade do |t|
+    t.integer  "recipient_id"
+    t.integer  "recipient_group_id"
+    t.integer  "message_id"
+    t.integer  "is_read",            limit: 2, default: 0
+    t.datetime "created_at",                               null: false
+    t.datetime "updated_at",                               null: false
+    t.index ["message_id"], name: "index_chat_engine_message_recipients_on_message_id", using: :btree
+  end
+
+  create_table "chat_engine_messages", force: :cascade do |t|
+    t.integer  "creator_id"
+    t.string   "content"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "chat_engine_user_groups", force: :cascade do |t|
+    t.integer  "group_id"
+    t.integer  "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["group_id"], name: "index_chat_engine_user_groups_on_group_id", using: :btree
+  end
 
   create_table "microposts", force: :cascade do |t|
     t.text     "content"

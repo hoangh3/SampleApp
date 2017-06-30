@@ -1,0 +1,37 @@
+|--app
+|   |--assets
+|   |--controllers
+|   |     |--<engine>
+|   |     |     |--application_controller.rb
+|   |--helpers
+|   |     |--<engine>
+|   |     |     |--application_helper.rb
+|   |--jobs
+|   |     |--<engine>
+|   |           |--application_job.rb
+|   |--mailers
+|   |     |--<engine>
+|   |     |     |--application_mailer.rb
+|   |--models
+|   |     |--<engine>
+|   |     |     |--application_record.rb
+|   |--views
+|   |     |--layout
+|   |     |     |--<engine>
+|   |     |          |--application.html.erb
+|--bin
+|--config
+|--lib
+|   |--<engine>
+|   |     |--engine.rb
+|   |     |--version.rb
+|   |--tasks
+    |--<engine>.rb
+|--test
+|.gitignore
+|Gemfile
+|Gemfile.lock
+|MT--LICENSE
+|README.md
+|Rakefile
+|<engine>.gemspec

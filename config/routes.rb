@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  mount ChatEngine::Engine, at: "/chat_engine"
+
   root 'static_pages#home'
 
   get 'static_pages/home'

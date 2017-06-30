@@ -1,3 +1,11 @@
+PATH
+  remote: ../chat_engine
+  specs:
+    chat_engine (0.1.0)
+      jquery-rails
+      rails (~> 5.0.0)
+      redis (~> 3.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -314,6 +322,7 @@ GEM
       builder
       nokogiri (>= 1.4.1)
       trollop
+    redis (3.3.3)
     rest-client (2.0.0)
       http-cookie (>= 1.0.2, < 2.0)
       mime-types (>= 1.16, < 4.0)
@@ -373,6 +382,7 @@ DEPENDENCIES
   bootstrap-will_paginate (= 0.0.10)
   byebug
   carrierwave (= 0.11.2)
+  chat_engine!
   cloudinary
   coffee-rails (~> 4.2)
   faker (= 1.6.3)
@@ -399,4 +409,4 @@ DEPENDENCIES
   will_paginate (= 3.1.0)
 
 BUNDLED WITH
-   1.12.5
+   1.13.6
